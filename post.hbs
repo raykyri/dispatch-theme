@@ -1,0 +1,37 @@
+{{!< default}}
+<div class="full-post d-flex flex-column h-100">
+{{#post}}
+    {{!-- Blog post template --}}
+    {{^has tag='#link,#micro'}}
+        {{!-- This is a full, long post --}}
+        <div class="container flex-grow-1 flex-shrink-0">
+            <div class="row">
+                <div class="col-md-8 col-lg-7 mx-auto">
+                  <div class="post-content mt-5">
+                    <div class="my-4">
+                      <h2 class="post-title my-2">{{title}}</h2>
+                      <a class="text-black-50" href="{{url}}">{{date published_at format="MMMM D, YYYY"}}</a>
+                    </div>
+                    {{content}}
+                    {{> "taglist" }}
+                    {{> "author-info"}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        {{!-- This is a micro post or a link post --}}
+        <div class="post-content container">
+            <div class="row mt-lg-5">
+                <div class="post-micro col-md-8 col-lg-7 mx-auto mt-xl-5">
+                    <div class="post-micro-header my-5 text-black-50 text-center text-uppercase">{{date published_at format="LLL"}}</div>
+                    <div class="post-micro-text text-justify">
+                        {{content}}
+                    </div>
+                    {{> "author-info"}}
+                </div>
+            </div>
+        </div>
+    {{/has}}
+{{/post}}
+</div>

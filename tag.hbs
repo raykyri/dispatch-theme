@@ -1,0 +1,15 @@
+{{!< default}}
+<div class="container">
+    <div class="row">
+        <div class="post-feed col-md-8 col-lg-7 mx-auto" style="margin-bottom: 5rem; margin-top: 5rem;">
+            <ul class="post-list list-unstyled">
+                {{#foreach posts}}
+                {{> "index-post-entry"}}
+                {{/foreach}}
+            </ul>
+            {{#if pagination}}
+            {{pagination}}
+            {{/if}}
+        </div>
+    </div>
+</div>
