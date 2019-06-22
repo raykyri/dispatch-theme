@@ -1,10 +1,18 @@
 {{!-- Default dark top navigation --}}
-<nav class="flex-shrink-0 flex-grow-0 navbar navbar-expand-lg navbar-light bg-light small">
+<nav class="flex-shrink-0 flex-grow-0 navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse" id="mainNavbar">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link site-title" href="/">
+                <i class="fas fa-book"></i>&nbsp;
+                    {{@site.title}}
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav small">
             {{^is 'index'}}
             <li class="nav-item nav-home">
                 <a class="nav-link" href="/"><span class="font-weight-bolder">&larr;</span> Home</a>
@@ -13,8 +21,6 @@
             {{#if @site.navigation}}
             {{navigation}}
             {{/if}}
-        </ul>
-        <ul class="navbar-nav">
             {{#if @site.facebook}}
             <li class="nav-item">
                 <a class="nav-link icon facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>

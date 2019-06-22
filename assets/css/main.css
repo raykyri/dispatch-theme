@@ -148,7 +148,40 @@
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        /*background-color: #eee;*/
+    }
+
+    .font-weight-semibold {
+        font-weight: 600;
+    }
+
+    nav .nav-item a.nav-link.site-title {
+        color: #fff !important;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+    nav .nav-item a.nav-link.site-title svg {
+        margin-right: 2px;
+    }
+    nav input.form-control[type="search"] {
+        font-size: 15px;
+        padding-top: 9px;
+    }
+
+    @media (min-width: 768px) {
+        .post-feed {
+            padding-right: 50px;
+        }
+    }
+    @media (min-width: 576px) {
+        .post-feed {
+            padding-right: 40px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1040px;
+        }
     }
 
 /*--- 3.) Colors ---*/
@@ -160,6 +193,10 @@
 
     .text-white-70 {
         color: rgba(255,255,255,.7)!important
+    }
+
+    .bg-dark {
+        background-color: #111 !important;
     }
 
 /*--- 4.) Off-canvas navigation ---*/
@@ -259,6 +296,25 @@
     .full-post .post-content .post-micro figcaption {
         color: #444;
         /*font-size: 80%;*/
+    }
+
+    .site-about {
+    }
+    .site-about .column-content {
+        border: 1px solid #eee;
+        background: #f8f8f8;
+        padding: 26px;
+        margin: 0 -14px;
+    }
+    .site-about .column-content h6 {
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    .site-about .column-content h6:first-child {
+        margin-top: 0;
+    }
+    .site-about .column-content p {
+        margin: 18px 0 10px;
     }
 
 /*--- 6.) Picture Micro Post Formatting (pictures.hbs) ---*/
